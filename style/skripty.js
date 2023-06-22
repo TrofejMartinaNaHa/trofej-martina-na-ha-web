@@ -77,7 +77,7 @@ $(function(){
   $(this).tab('show')
 })
 
-countToDate('dday', "September 11, 2022 14:00:00", "HURA!");
+countToDate('dday', "September 3, 2023 12:00:00", "HURA!");
 	
 });
 
