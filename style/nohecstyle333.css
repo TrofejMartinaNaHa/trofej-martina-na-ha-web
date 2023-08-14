@@ -218,6 +218,7 @@ body .header:first-child {
   font-size: 28px;
   text-align: center;
   font-weight: bold;
+  color: #d8192f;
 }
 
 .jumbotron .row:nth-child(2) {
@@ -290,7 +291,7 @@ body .header:first-child {
 }
 
 .banner {
-   background-color: antiquewhite;
+  background-color: antiquewhite;
   height:5px; 
   color: #d8192f;
 }
@@ -542,6 +543,9 @@ body .header:first-child {
 		display: none;
 	} */
 	
+	#dday {
+		color: white;
+	}
 	
 	#nohap1 {
 		display: none;
