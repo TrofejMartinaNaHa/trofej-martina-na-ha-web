@@ -232,12 +232,12 @@ body .header:first-child {
 
 
 
-#jakto {
+#prijezd {
 	background: url(Martinhnedy.jpg) no-repeat center center;
 	background-size: cover;
 }
 
-#jakto h1,
+#prijezd h1,
 #mapa h1,
 #media h1,
 #galerie h1 {
@@ -253,12 +253,17 @@ body .header:first-child {
 	text-align: left;
 }
 
-#mapa {
+#prespani {
 	background: url(honzah3.jpg) no-repeat center center;
 	background-size: cover;
 }
 
-#media {
+#darecek {
+	background: url(anina_ruce_bar.jpeg) no-repeat center center;
+	background-size: cover;
+}
+
+#kontakt {
 	background: url(kartyor.jpg) no-repeat center center;
 	background-size: cover;
 }
