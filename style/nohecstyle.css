@@ -5,6 +5,7 @@ body {
 	font-family: 'Dosis', serif;
 	font-size: 15px;
 	background-color: #ff9cac;
+	color: white;
 }
 
 /*.karl::after {
@@ -54,6 +55,15 @@ font-style: italic;
 
 }
 
+.vykryti-bila {
+    border: 5px solid #ffffff;
+    width: 470px;
+    padding: 15px;
+    box-shadow: 0px 1px 7px grey;
+    background-color: white;
+    border-radius: 24px;
+}
+
 .circle>img {
 	border-radius: 50%;
 }
@@ -78,6 +88,12 @@ font-style: italic;
 
 .p-center {
 	text-align: center;
+}
+
+.nav>li>a>img {
+	background-color: white;
+	border-radius: 12px;
+
 }
 
 /* Header */
@@ -203,6 +219,7 @@ body .header:first-child {
 	padding-bottom: 0;
 	color: white;
 	text-align: center;
+	box-shadow: 0px 1px 7px grey;
 }
 
 .jumbotron img {
@@ -210,7 +227,7 @@ body .header:first-child {
 }
 
 .jumbotron h1 {
-	text-transform: uppercase;
+
 	margin-top: 90px;
 	text-align: center;
 }
@@ -306,14 +323,12 @@ body .header:first-child {
 }
 
 .banner {
-	background-color: antiquewhite;
+	background-color: #faebd700;
 	height: 5px;
 	color: #d8192f;
 }
 
-.banner h2 {
-	text-transform: uppercase;
-}
+
 
 
 /* Section */
@@ -331,18 +346,20 @@ body .header:first-child {
 
 .section p {
 	margin: 20px auto;
-	font-size: 16px;
+	font-size: 20px;
+	color: black;
 }
 
 .section h3 {
-
+	margin-top: 0px;
 	letter-spacing: 5px;
 }
 
 .section h4 {
 	margin: 30px 0;
-	color: #d8192f;
-	text-transform: uppercase;
+	color: hsl(0, 0%, 100%);
+	font-size: 22px;
+	
 
 }
 
@@ -460,11 +477,7 @@ body .header:first-child {
 		font-size: 63px;
 	}
 
-	.section h3 {
-		font-size: 20px;
-		letter-spacing: 4px;
-		line-height: 40px;
-	}
+	
 
 	.banner h2 {
 		font-size: 24px;
@@ -513,9 +526,9 @@ body .header:first-child {
 	}
 
 	.section h3 {
-		font-size: 22px;
+		font-size: 26px;
 		letter-spacing: 5px;
-		text-transform: uppercase;
+		line-height: 45px;
 	}
 
 	.banner h2 {
