@@ -232,6 +232,7 @@ body .header:first-child {
 
 	margin-top: 45px;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .jumbotron h2:first-child {
@@ -250,6 +251,11 @@ body .header:first-child {
 }
 
 
+
+#progam-jumbotron_II {
+	background: url(Titulka_2023.jpeg) no-repeat center center;
+	background-size: cover;
+}
 
 #prijezd {
 	background: url(Martinhnedy.jpg) no-repeat center center;
