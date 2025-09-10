@@ -57,11 +57,13 @@ font-style: italic;
 
 .vykryti-bila {
     border: 5px solid #ffffff;
-    width: 470px;
+    width: 98%;
     padding: 15px;
     box-shadow: 0px 1px 7px grey;
     background-color: white;
     border-radius: 24px;
+    max-width: 380px;
+    margin: auto;
 }
 
 .circle>img {
@@ -212,7 +214,7 @@ body .header:first-child {
 
 .jumbotron {
 
-	background: url(Titulka_2023_II.jpeg) no-repeat center center;
+	background: url(nohy_oggos_banner2019.jpg) no-repeat center center;
 	background-size: cover;
 	margin: 20px auto;
 	padding-top: 0;
@@ -228,7 +230,7 @@ body .header:first-child {
 
 .jumbotron h1 {
 
-	margin-top: 90px;
+	margin-top: 45px;
 	text-align: center;
 }
 
@@ -353,6 +355,7 @@ body .header:first-child {
 .section h3 {
 	margin-top: 0px;
 	letter-spacing: 5px;
+	color: black;
 }
 
 .section h4 {
