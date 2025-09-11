@@ -27,8 +27,8 @@ function countToDate(domIdSelector, toDate, finishMessage){
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 		// Display the result in the element with id="demo"
-		document.getElementById(domIdSelector).innerHTML = days + " dní " + hours + " hodin "
-		+ minutes + " minut " + seconds + " sekund";
+		document.getElementById(domIdSelector).innerHTML = days + " d. " + hours + " h. "
+		+ minutes + " m. " + seconds + " s.";
 
 		// If the count down is finished, write some text 
 		if (distance < 0) {
@@ -75,7 +75,7 @@ $(function(){
 		$(this).tab('show')
 	})
 
-	countToDate('dday', "September 17, 2023 12:00:00", "HURA!");
+	countToDate('dday', "September 14, 2025 14:00:00", "HURA!");
 
 	//Get the button
 	let mybutton = document.getElementById("btn-back-to-top");

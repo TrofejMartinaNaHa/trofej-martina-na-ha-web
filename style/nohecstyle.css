@@ -95,7 +95,7 @@ font-style: italic;
 .nav>li>a>img {
 	background-color: white;
 	border-radius: 12px;
-
+	margin: 0px;
 }
 
 /* Header */
@@ -184,7 +184,7 @@ body .header:first-child {
 	background-color: transparent;
 	color: white;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-	border-bottom: 5px solid white;
+	border: 5px solid white;
 }
 
 .nav>li>a:active {
@@ -214,10 +214,10 @@ body .header:first-child {
 
 .jumbotron {
 
-	background: url(nohy_oggos_banner2019.jpg) no-repeat center center;
+	background: url(Titulka_2023_II.jpeg) no-repeat center center;
 	background-size: cover;
 	margin: 20px auto;
-	padding-top: 0;
+	padding-top: 35px;
 	padding-bottom: 0;
 	color: white;
 	text-align: center;
@@ -252,8 +252,8 @@ body .header:first-child {
 
 
 
-#progam-jumbotron_II {
-	background: url(Titulka_2023.jpeg) no-repeat center center;
+#progam {
+	background: url(banner_2021.JPG) no-repeat center center;
 	background-size: cover;
 }
 
@@ -366,7 +366,7 @@ body .header:first-child {
 
 .section h4 {
 	margin: 30px 0;
-	color: hsl(0, 0%, 100%);
+	color: black;
 	font-size: 22px;
 	
 
@@ -392,8 +392,7 @@ body .header:first-child {
 }
 
 #nohap1 {
-	margin-top: -40px;
-	margin-bottom: 10px;
+	margin: 10px auto;
 }
 
 #nohap2 {
@@ -594,13 +593,7 @@ body .header:first-child {
 		color: white;
 	}
 
-	#nohap1 {
-		display: none;
-	}
 
-	#nohap2 {
-		display: block;
-	}
 
 	#pupikp1 {
 		display: none;
