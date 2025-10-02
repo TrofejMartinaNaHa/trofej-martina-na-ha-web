@@ -4,7 +4,7 @@ body {
 	padding: 0;
 	font-family: 'Dosis', serif;
 	font-size: 15px;
-	background-color: #ff9cac;
+	background-color: #f3e4e7;
 	color: white;
 }
 
@@ -292,6 +292,7 @@ body .header:first-child {
 #kontakt {
 	background: url(nechte_si_nafotit.JPG) no-repeat center center;
 	background-size: cover;
+	height: 460px;
 }
 
 
