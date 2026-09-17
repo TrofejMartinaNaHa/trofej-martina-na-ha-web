@@ -75,7 +75,7 @@ $(function(){
 		$(this).tab('show')
 	})
 
-	countToDate('dday', "September 14, 2025 14:00:00", "HURA!");
+	countToDate('dday', "September 20, 2026 14:00:00", "HURA!");
 
 	//Get the button
 	let mybutton = document.getElementById("btn-back-to-top");

@@ -1,0 +1,616 @@
+/* Trofej Martina na H. — čisté styly v3
+   Mobile-first, bez Bootstrapu, s fluidní typografií. */
+
+:root {
+  /* Layout */
+  --page-bg: #f3e4e7;
+  --paper-bg: #ffffff;
+  --paper-width: 380px;
+  --layout-width: 940px;
+  --content-padding: 15px;
+
+  /* Barvy a efekty */
+  --accent: #d8192f;
+  --program-accent: #e94e31;
+  --footer-bg: #faebd7;
+  --text: #000000;
+  --link: #337ab7;
+  --shadow: 0 1px 7px grey;
+  --radius: 24px;
+
+  /* Fluidní typografie: minimum → plynulé zvětšování → maximum */
+  --font-body: clamp(1.075rem, 1.02rem + 0.24vw, 1.25rem);       /* ~17.2–20 px */
+  --font-h4: clamp(1.25rem, 1.16rem + 0.42vw, 1.5rem);          /* 20–24 px */
+  --font-h3: clamp(1.375rem, 1.24rem + 0.62vw, 1.65rem);        /* 22–26.4 px */
+  --font-hero: clamp(2.75rem, 2.05rem + 3.5vw, 3.9375rem);      /* 44–63 px */
+  --font-event-date: clamp(1.45rem, 1.25rem + 0.9vw, 2rem);     /* ~23–32 px */
+  --font-countdown: clamp(1.25rem, 1.1rem + 0.7vw, 1.6875rem);  /* 20–27 px */
+
+  /* Plovoucí menu */
+  --floating-menu-size: clamp(35px, 11vw, 42px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color:#ff9600cc;
+
+  /* Mobile-first pozadí. Barva slouží jako fallback při načítání obrázku. */
+  
+    background-image: url(jajsembgmobil.jpg);
+    background-repeat: repeat-y;
+    background-position: top center;
+    background-size: 100% auto;
+    background-attachment: scroll;
+    background-blend-mode: hard-light;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.sipka-sekce {
+    max-width: 65px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    background-color: #d68ade;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 0.12em;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: min(100%, var(--layout-width));
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+}
+
+/* Úzký obsahový „lístek / lajna“ — záměrně zůstává 380 px i na desktopu. */
+.vykryti-bila {
+  max-width: 450px;
+  margin-inline: auto;
+  padding: var(--content-padding);
+  border: 5px solid var(--paper-bg);
+  background: var(--paper-bg);
+  /*box-shadow: var(--shadow);*/
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.section-header {
+  margin: 0;
+  border: 0;
+}
+
+.section-header h3 {
+  margin-top: 0;
+}
+
+.p-center {
+  text-align: center;
+}
+
+/* Horní sociální navigace */
+.social-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-nav a {
+  display: block;
+  padding: 10px 15px;
+  border: 5px solid transparent;
+  background: transparent;
+}
+
+.social-nav a:hover,
+.social-nav a:focus-visible {
+  
+  text-decoration: none;
+}
+
+.social-nav img {
+  display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    border-radius: 20%;
+    background: white;
+}
+
+.social-nav img:hover {
+  opacity: 0.9;
+  background-color:#d68ade;
+}
+
+/* Jumbotrony / obrazové předěly */
+.jumbotron {
+  margin: -75px auto;
+  padding: 35px 0 0;
+  color: #ffffff;
+  text-align: center;
+  background: url(Titulka_2023_II.jpeg) no-repeat center center;
+  background-size: cover;
+  /*box-shadow: var(--shadow);*/
+}
+
+.jumbotron .container {
+  padding-inline: clamp(15px, 6vw, 35px);
+}
+
+.jumbotron img {
+  margin-top: 30px;
+}
+
+.jumbotron h1 {
+  margin-top: 45px;
+  font-size: var(--font-hero);
+  line-height: 0.98;
+  text-align: center;
+  text-transform: uppercase;
+  /*text-shadow: 2px 2px 7px grey;*/
+}
+
+#home .event-title,
+#home .event-date,
+#dday {
+  width: min(100%, var(--paper-width));
+  margin-inline: auto;
+  padding: 5px;
+  border: 5px solid #ffffff;
+  /* border-radius: var(--radius);*/
+  color: #e94e31;
+  background: #ffffff;
+ /* box-shadow: var(--shadow);*/
+  
+}
+
+#home .event-title {
+  margin-top: 40px;
+    margin-bottom: 60px;
+    letter-spacing: clamp(0.22rem, 1.35vw, 0.625rem);
+    /* text-shadow: 0 1px 7px grey; */
+    color: #424243;
+  
+}
+
+#home .event-date {
+  margin-top: -70px;
+    margin-bottom: 60px;
+    font-size: var(--font-event-date);
+    line-height: 1.2;
+    font-weight: 700;
+    /* text-shadow: 0 1px 7px grey; */
+    color: #424243;
+}
+
+#dday {
+ margin-top: -24px;
+    margin-bottom: 28px;
+    font-size: var(--font-countdown);
+    line-height: 1.25;
+    text-align: center;
+    font-weight: 700;
+    /* text-shadow: 0 1px 7px grey; */
+    color: #e94e31;
+    font-size: 22px;
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+    font-weight: 300;
+}
+
+#prijezd {
+  background-image: url(Martinhnedy.jpg);
+}
+
+#prespani {
+  background-image: url(honzah3.jpg);
+}
+
+#darecek {
+  background-image: url(anina_ruce_bar.jpeg);
+}
+
+#kontakt {
+  
+  background-image: url(expertyza_karty.JPG);
+}
+
+#kolobeh {
+  
+  background-image: url(banner_koraly.jpg);
+}
+
+#prijezd h1,
+#galerie h1 {
+  text-align: right;
+}
+
+/* Mezery mezi obrazovou a textovou částí */
+.banner {
+  height: 5px;
+  margin:-10px;
+  padding: 0;
+  color: var(--accent);
+  background: transparent;
+}
+
+/* Obsahové sekce */
+.section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.section img {
+  margin-top: 15px;
+}
+
+img.testimonial-avatar {
+    height: 75px;
+}
+
+.section p {
+  margin: 10px auto;
+  color: #424243;
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+.section h3 {
+  margin-top: 0;
+  color: #424243;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: 0.025em;
+  font-weight: 300;
+}
+
+.section h4 {
+  margin: 10px 0 5px;
+  color: #424243;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.image-grid img {
+  max-width: 100%;
+  margin: 0 5px 5px 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.image-grid img:hover {
+  opacity: 0.8;
+}
+
+.program-highlight {
+  color: var(--program-accent) !important;
+  font-weight: 700;
+}
+
+.map-embed {
+  display: block;
+  width: 250px;
+  max-width: 100%;
+  height: 250px;
+  margin: 15px auto 0;
+  border: 0;
+}
+
+#nohap1,
+#nohap1-misto {
+  margin: 10px auto;
+}
+
+#pupikp2 {
+  display: none;
+}
+
+.route-heart {
+  display: block;
+  margin: 10px auto;
+}
+
+.testimonial-badge,
+.testimonial-avatar {
+  margin: 10px;
+  border-radius: 50%;
+}
+
+/* === GALERIE 3 × 3 === */
+
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  margin: 25px 0;
+  gap: 0;
+
+  overflow: hidden;
+}
+
+.galerie-grid img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.galerie-grid a {
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.galerie-grid a:hover img {
+  opacity: 0.82;
+}
+
+/* Footer */
+.footer {
+  margin-top: 0;
+  border-top: 1px solid #eeeeee;
+  color: #ffffff;
+  background: var(--footer-bg);
+}
+
+.footer p {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Plovoucí navigace: mobil dole, tablet/desktop svisle vpravo. */
+#buttons-menu {
+  position: fixed;
+  z-index: 1040;
+  left: 50%;
+  bottom: 8px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+
+  max-width: calc(100vw - 12px);
+  padding: 4px;
+
+  border-radius: 999px;
+  transform: translateX(-50%);
+
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(4px);
+}
+
+#buttons-menu button {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: var(--floating-menu-size);
+  height: var(--floating-menu-size);
+  margin: 0;
+  padding: 4px;
+  border: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#buttons-menu button:hover,
+#buttons-menu button:focus-visible {
+  opacity: 0.82;
+}
+
+#buttons-menu button img {
+  display: block;
+  width: auto;
+  max-width: calc(var(--floating-menu-size) - 8px);
+  height: auto;
+  max-height: calc(var(--floating-menu-size) - 8px);
+  margin: 0;
+  padding: 3px;
+}
+
+#buttons-menu [hidden] {
+  display: none !important;
+}
+
+
+
+/*
+   RESPONSIVNÍ BREAKPOINTY
+   Mobil:  < 768 px
+   Tablet: 768–1199 px
+   PC:     >= 1200 px
+
+   Typografie zůstává fluidní pomocí clamp(); media queries zde řeší
+   především změnu pozadí a skutečné změny layoutu.
+*/
+
+
+/* TABLET */
+@media (min-width: 768px) {
+  body {
+    background-image: url('jajsembgtablet.jpg');
+  }
+
+  :root {
+    --floating-menu-size: 50px;
+  }
+
+ 
+  #buttons-menu button {
+    padding: 5px;
+  }
+}
+
+/* Zachování původního chování ilustrace pupíku na větších displejích. */
+@media (min-width: 992px) {
+  #pupikp2 {
+    display: block;
+  }
+}
+
+/* PC */
+@media (min-width: 1200px) {
+  body {
+    background-image: url('jajsembgpc.jpg');
+  }
+}
+
+/* Respektování uživatelského nastavení omezení animací. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  :root {
+    --page-texture: url("jajsembgpc.jpg");
+  }
+
+  /* PC – kompaktní menu vpravo dole, rozbalované doleva */
+@media (min-width: 1200px) {
+
+  #buttons-menu {
+    top: auto;
+    right: 18px;
+    bottom: 18px;
+    left: auto;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0;
+
+    padding: 4px;
+    transform: none;
+
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(4px);
+
+    transition: gap 0.22s ease;
+  }
+
+  #buttons-menu button:not(.menu-trigger) {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateX(8px) scale(0.9);
+
+    transition:
+      width 0.22s ease,
+      padding 0.22s ease,
+      opacity 0.16s ease,
+      transform 0.22s ease,
+      visibility 0s linear 0.22s;
+  }
+
+  #buttons-menu:hover,
+  #buttons-menu:focus-within {
+    gap: 6px;
+  }
+
+  #buttons-menu:hover button:not(.menu-trigger),
+  #buttons-menu:focus-within button:not(.menu-trigger) {
+    width: var(--floating-menu-size);
+    padding: 5px;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(0) scale(1);
+
+    transition:
+      width 0.22s ease,
+      padding 0.22s ease,
+      opacity 0.16s ease 0.05s,
+      transform 0.22s ease,
+      visibility 0s;
+  }
+}
+
+  /* Ve výchozím stavu necháme jen hlavní tlačítko. */
+  #buttons-menu:not(:hover):not(:focus-within)
+  button:not(.menu-trigger) {
+    display: none;
+  }
+} 
